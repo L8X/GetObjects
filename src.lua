@@ -1,7 +1,7 @@
 local cloneref = cloneref or function(ref)
     return ref
 end
-local clonefunction = clonefunction or clonefunction(func)
+local clonefunction = clonefunction or function(func)
     return func
 end
 local game = cloneref and cloneref(game) or game
