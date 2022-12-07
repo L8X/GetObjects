@@ -5,7 +5,6 @@ local clonefunction = clonefunction or function(func)
     return func
 end
 local game = cloneref and cloneref(game) or game
-local getgenv = clonefunction and clonefunction(getgenv) or getgenv or nil
 local GetService = clonefunction and clonefunction(game.GetService) or game.GetService
 local InsertService = cloneref and cloneref(GetService(game, "InsertService")) or GetService(game, "InsertService")
 local LoadLocalAsset = clonefunction and clonefunction(InsertService.LoadLocalAsset) or InsertService.LoadLocalAsset
