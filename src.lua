@@ -9,16 +9,14 @@ local getgenv = clonefunction and clonefunction(getgenv) or getgenv
 local GetService = clonefunction and clonefunction(game.GetService) or game.GetService
 local InsertService = cloneref and cloneref(GetService(game, "InsertService")) or GetService(game, "InsertService")
 local LoadLocalAsset = clonefunction and clonefunction(InsertService.LoadLocalAsset) or InsertService.LoadLocalAsset
-local table = table
-local task = task
 local table_insert = clonefunction and clonefunction(table.insert) or table.insert
-local protectedcall = clonefunction and clonefunction(pcall) or pcall
+local pcall = clonefunction and clonefunction(pcall) or pcall
 local getobjects = function(a)
     local Objects = {}
     if a then
         local b = LoadLocalAsset(InsertService, a)
         if b then 
-            protectedcall(table_insert, Objects, b) 
+            pcall(table_insert, Objects, b) 
         end
     end
     return Objects
