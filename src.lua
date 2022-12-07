@@ -7,7 +7,7 @@ end
 local game = cloneref and cloneref(game) or game
 local getgenv = clonefunction and clonefunction(getgenv) or getgenv
 local GetService = clonefunction and clonefunction(game.GetService) or game.GetService
-local InsertService = cloneref and cloneref(GetService(game, "InsertService")) or GetService(game, InsertService)
+local InsertService = cloneref and cloneref(GetService(game, "InsertService")) or GetService(game, "InsertService")
 local LoadLocalAsset = clonefunction and clonefunction(InsertService.LoadLocalAsset) or InsertService.LoadLocalAsset
 local table = table
 local task = task
