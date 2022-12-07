@@ -19,7 +19,7 @@ local getobjects = function(a)
     if a then
         local b = LoadLocalAsset(InsertService, a)
         if b then 
-            task_spawn(pcall, table_insert, Objects, b) 
+            task_spawn(protectedcall, table_insert, Objects, b) 
         end
     end
     return Objects
