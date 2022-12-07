@@ -13,13 +13,12 @@ local table = table
 local task = task
 local table_insert = clonefunction and clonefunction(table.insert) or table.insert
 local protectedcall = clonefunction and clonefunction(pcall) or pcall
-local task_spawn = clonefunction or clonefunction(task.spawn) or task.spawn
 local getobjects = function(a)
     local Objects = {}
     if a then
         local b = LoadLocalAsset(InsertService, a)
         if b then 
-            task_spawn(protectedcall, table_insert, Objects, b) 
+            protectedcall(table_insert, Objects, b) 
         end
     end
     return Objects
