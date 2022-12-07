@@ -23,4 +23,6 @@ local getobjects = function(a)
 end
 if getgenv then
     getgenv().getobjects = getobjects
+else
+    shared.getobjects = getobjects
 end
